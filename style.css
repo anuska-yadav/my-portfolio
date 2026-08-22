@@ -1,0 +1,991 @@
+/* header */
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-image:url("background.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+}
+
+#home{
+    background:transparent;
+    padding-bottom:80px;
+}
+
+*{
+    padding:0;
+    margin:0;
+    font-family:Arial;
+    color:white;
+}
+
+.upper-box{
+    height:750px;
+    line-height:70px;
+    background-image:url("");
+    background-size:contain;
+    background-position: right;
+    background-repeat: no-repeat;
+    display:flex;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+    background:transparent;
+}
+
+#header-line{
+    text-align: end;
+    height:80px;
+    width:1400px;
+    align-items:center;
+    border:2px solid rgb(139, 142, 145);
+    border-radius:10px;
+    padding-right:10px;
+}
+
+.in-header-line{
+   margin-right:50px;
+   text-decoration:none;
+   cursor:pointer;
+   transition: 0.3s;
+}
+
+.in-header-line:hover{
+    color:rgb(85,104,166);
+    text-decoration:rgb(85,104,166) underline;
+}
+
+#box{
+width:1400px;
+display:flex;
+justify-content:space-evenly;
+background:transparent;
+}
+
+#msg{
+position:absolute;
+font-size:2.0rem;
+top:150px;
+width:500px;
+text-align:center;
+}
+
+#name{
+color:rgb(85, 104, 166)
+}
+
+#intro{
+position:absolute;
+top:450px;
+width:500px;
+height:250px;
+display:flex;
+justify-content:space-evenly;
+align-items:center;
+background-color:rgb(45, 44, 44);
+z-index:1;
+border:1px solid silver;
+border-radius:12px;
+background:transparent;
+}
+
+#photo{
+    width:240px;
+    height:240px;
+    background-image:url("profile.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+}
+
+#intro-para{
+    width:240px;
+    height:240px;
+    background-color:rgb(45, 44, 44);
+    color:beige;
+    line-height:normal;
+    padding-left:5px;
+}
+
+#about{
+    background-color:rgb(45, 44, 44);
+    color:rgb(85,104,166);
+    font-size:1.5rem;
+}
+
+#details{
+   background-color:rgb(45, 44, 44);
+}
+
+#more{
+   background-color:rgb(45, 44, 44);
+}
+
+#link-box{
+display:flex;
+justify-content:center;
+align-items:center;
+background:transparent;
+}
+
+#links{
+height:80px;
+width:900px;
+display:flex;
+justify-content:space-around;
+align-items:center;
+gap:10px;
+background-color: rgb(45, 44, 44);
+border-radius:5px;
+}
+
+#profile{
+display:flex;
+justify-content:space-evenly;
+align-items:center;
+gap:7px;
+padding-left:10px;
+padding-top:10px;
+border-radius:5px;
+}
+
+.li{
+height:40px;
+width:40px;
+position:relative;
+}
+
+.li::after{
+content:attr(data-text);
+position:absolute;
+top:45px;
+left:50%;
+transform:translateX(-50%);
+
+background:rgb(45,44,44);
+color:white;
+padding:5px 8px;
+border-radius:5px;
+border:1px solid rgba(255,255,255,0.3);
+
+font-size:12px;
+line-height:normal;
+white-space :nowrap;
+
+opacity:0;
+visibility:hidden;
+transition:0.2s;
+}
+
+.li:hover::after{
+    opacity:1;
+    visibility:visible;
+}
+
+#world{
+    border:2px solid rgb(139, 142, 145);
+    padding:3px 5px 3px ;
+    border-radius:5px;
+}
+
+/* main */
+
+.skill{
+    min-height:450px;
+    margin-top:30px;
+    text-align:center;
+    margin-bottom:50px;
+    background:transparent;
+}
+
+.skill h1{
+    margin-bottom:35px;
+    text-shadow:0 0 12px rgba(255,255,255,0.25);
+}
+
+#tech{
+    min-height:350px;
+    display:flex;
+    justify-content:center;
+    position:relative;
+    text-align:flex-end;
+    padding-left:50px;
+    padding-right:50px;
+    gap:50px;
+    flex-wrap:wrap;
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
+#tech>div{
+    width:200PX;
+    height:200px;
+    border-radius:12px;
+    border:1px solid rgba(255,255,255,0.15);
+    background-color:rgba(10,10,10,0.35);
+    background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center;
+    transition:0.3s ease;
+    cursor:pointer;
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    padding-bottom:5px;
+}
+
+#html{
+    background-image:url("html.png");
+}
+
+#css{
+    background-image:url("css.png");
+}
+
+#js{
+    background-image:url("js.png");
+}
+
+#cpp{
+    background-image:url("cpp.png");
+}
+
+#py{
+    background-image:url("python.png");
+}
+
+#c{
+    background-image:url("c.png");
+}
+
+#dsa{
+    background-image:url("dsa.png");
+}
+
+#oop{
+    background-image:url("oops.png");
+}
+
+#tech>div:hover{
+    transform:translateY(-8px);
+    border-color:rgba(85,104,166,0.8);
+    box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+#done{
+    text-align:center;
+    min-height:400px;
+    background:transparent;
+    padding-bottom:10px;
+}
+
+#projects{
+min-height:300px;
+justify-content:center;
+align-items:flex-end;
+display:flex;
+padding-top:20px;
+gap:15px;
+}
+
+#projects>div{
+    display:flex;
+    align-items:flex-end;
+    justify-content:center;
+    padding-bottom:5px;
+
+    background-color:rgba(10,10,10,0.35);
+    border:1px solid rgba(255,255,255,0.15);
+    border-radius:12px;
+    
+    transition: 0.3s;
+}
+
+#projects>div:hover{
+   transform:translateY(-8px);
+   border-color:rgba(255,255,255,0.5);
+}
+
+#tictac{
+background-image:url("tictac.png");
+background-size:cover;
+background-repeat:no-repeat;
+width:220px;
+height:220px;
+cursor:pointer;
+}
+
+#rps{
+background-image:url("rps.png");
+background-size:cover;
+background-repeat:no-repeat;
+width:220px;
+height:220px;
+cursor:pointer;
+}
+
+#pyqs{
+background-image:url("pyqs.png");
+background-size:cover;
+background-repeat:no-repeat;
+width:220px;
+height:220px;
+cursor:pointer;
+}
+
+#curr{
+background-image:url("curr.png");
+background-size:cover;
+background-repeat:no-repeat;
+width:220px;
+height:220px;
+cursor:pointer;
+}
+
+#amazon{
+background-image:url("amazon.png");
+background-size:cover;
+background-repeat:no-repeat;
+width:220px;
+height:220px;
+cursor:pointer;
+}
+
+#goals{
+    text-align:center;
+    min-height:150px;
+    margin-top:50px;
+    padding:30px 20px;
+    background:rgba(0,0,0,0.7);
+}
+
+#goal-description{
+   padding:30px;
+   text-align:center;
+   max-width:800px;
+   margin:auto;
+   font-size:1.2rem;
+   line-height:1.6;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   ========================================= */
+
+
+/* ---------- TABLET ---------- */
+
+@media (max-width: 900px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+    .upper-box {
+        height: auto;
+        min-height: 0;
+        flex-direction: column;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    #header-line {
+        width: 94%;
+        height: auto;
+        min-height: 60px;
+
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        flex-wrap: wrap;
+
+        box-sizing: border-box;
+        padding: 10px;
+        line-height: normal;
+    }
+
+    .in-header-line {
+        margin: 5px 15px;
+    }
+
+
+    /* NAME */
+
+    #box {
+        width: 100%;
+        height: auto;
+        margin-top: 50px;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    #msg {
+        position: static;
+        width: 100%;
+        max-width: 600px;
+
+        text-align: center;
+        font-size: 1.7rem;
+    }
+
+
+    /* ABOUT */
+
+    #intro {
+        position: static;
+
+        width: 90%;
+        max-width: 600px;
+        height: auto;
+
+        margin-top: 45px;
+
+        display: flex;
+        align-items: center;
+
+        box-sizing: border-box;
+    }
+
+    #photo {
+        width: 45%;
+        height: 220px;
+
+        flex-shrink: 0;
+
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #intro-para {
+        width: 55%;
+        height: auto;
+        min-height: 220px;
+
+        box-sizing: border-box;
+        padding: 15px;
+    }
+
+
+    /* EXPLORE */
+
+    #link-box {
+        margin-top: 30px;
+    }
+
+    #links {
+        width: 90%;
+        max-width: 600px;
+    }
+
+
+    /* SKILLS */
+
+    .skill {
+        height: auto;
+        margin-top: 50px;
+    }
+
+    #tech {
+        width: 90%;
+        height: auto;
+
+        margin: auto;
+        padding: 30px 20px;
+
+        box-sizing: border-box;
+
+        gap: 25px;
+    }
+
+    #tech > div {
+        width: 180px;
+        height: 180px;
+        flex-shrink: 0;
+    }
+
+
+    /* PROJECTS */
+
+    #done {
+        height: auto;
+        margin-top: 50px;
+    }
+
+    #projects {
+        width: 90%;
+        height: auto;
+
+        margin: 30px auto 0;
+
+        display: flex;
+        flex-wrap: wrap;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 20px;
+
+        padding: 25px;
+
+        box-sizing: border-box;
+    }
+
+    #projects > div {
+        width: 240px;
+        height: 240px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* GOAL */
+
+    #goals {
+        height: auto;
+
+        margin-top: 50px;
+        padding: 25px 15px 35px;
+
+        box-sizing: border-box;
+    }
+
+    #goal-description {
+        padding: 20px;
+
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+}
+
+
+
+/* =========================================
+   PHONE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        overflow-x: hidden;
+    }
+
+
+    /* ---------- HEADER ---------- */
+
+    #home {
+        padding-bottom: 30px;
+    }
+
+    .upper-box {
+        height: auto;
+        min-height: 0;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        flex-wrap: nowrap;
+    }
+
+
+    /* NAVBAR */
+
+    #header-line {
+        width: 94%;
+        height: auto;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+
+        padding: 10px 5px;
+
+        box-sizing: border-box;
+
+        line-height: normal;
+    }
+
+    .in-header-line {
+        margin: 5px 8px;
+        font-size: 13px;
+    }
+
+
+    /* ---------- NAME ---------- */
+
+    #box {
+        width: 100%;
+        height: auto;
+
+        margin-top: 45px;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    #msg {
+        position: static;
+
+        width: 100%;
+        max-width: 400px;
+
+        text-align: center;
+
+        font-size: 1.35rem;
+    }
+
+    #greet,
+    #name {
+        margin: 5px 0;
+    }
+
+
+    /* ---------- ABOUT ---------- */
+
+    #intro {
+        position: static;
+
+        width: 92%;
+        max-width: 500px;
+
+        height: auto;
+        min-height: 0;
+
+        margin-top: 40px;
+
+        display: flex;
+        flex-direction: column;
+
+        align-items: center;
+
+        padding: 12px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* PROFILE IMAGE */
+
+    #photo {
+        width: 180px;
+        height: 180px;
+
+        flex-shrink: 0;
+
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        margin-bottom: 10px;
+    }
+
+
+    /* ABOUT TEXT */
+
+    #intro-para {
+        width: 100%;
+        height: auto;
+        min-height: 0;
+
+        padding: 15px;
+
+        box-sizing: border-box;
+
+        line-height: normal;
+    }
+
+    #about {
+        font-size: 1.25rem;
+    }
+
+    #details {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    #more {
+        font-size: 13px;
+        line-height: 1.7;
+    }
+
+
+    /* ---------- EXPLORE ---------- */
+
+    #link-box {
+        width: 100%;
+
+        margin-top: 25px;
+
+        display: flex;
+        justify-content: center;
+    }
+
+    #links {
+        width: 92%;
+        max-width: 500px;
+
+        height: auto;
+        min-height: 65px;
+
+        padding: 10px;
+
+        box-sizing: border-box;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    #world {
+        font-size: 12px;
+    }
+
+    #profile {
+        padding: 0;
+    }
+
+    .li {
+        width: 32px;
+        height: 32px;
+    }
+
+
+    /* =================================
+       SKILLS
+       ================================= */
+
+    .skill {
+        width: 100%;
+        height: auto;
+
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    .skill h1 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    #tech {
+        width: 92%;
+        height: auto;
+
+        margin: auto;
+
+        padding: 25px 10px;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 20px;
+    }
+
+    #tech > div {
+
+        width: 140px;
+        height: 140px;
+
+        flex-shrink: 0;
+    }
+
+
+    /* =================================
+       PROJECTS
+       ================================= */
+
+    #done {
+        width: 100%;
+        height: auto;
+
+        margin-top: 50px;
+
+        text-align: center;
+    }
+
+    #done h1 {
+        font-size: 1.6rem;
+    }
+
+    #projects {
+        width: 94%;
+        height: auto;
+
+        margin: 30px auto 0;
+
+        padding: 20px 0;
+
+        box-sizing: border-box;
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        gap: 20px;
+    }
+
+    #projects > div {
+
+        width: 280px;
+        height: 280px;
+
+        flex-shrink: 0;
+
+        box-sizing: border-box;
+    }
+
+    #tictac,
+    #rps,
+    #pyqs,
+    #curr,
+    #amazon {
+
+        width: 280px;
+        height: 280px;
+    }
+
+
+    /* =================================
+       GOAL
+       ================================= */
+
+    #goals {
+        width: 100%;
+
+        height: auto;
+
+        margin-top: 50px;
+
+        padding: 25px 15px 35px;
+
+        box-sizing: border-box;
+    }
+
+    #goals h1 {
+        font-size: 1.6rem;
+    }
+
+    #goal-description {
+
+        padding: 20px 10px 0;
+
+        font-size: 1rem;
+
+        line-height: 1.5;
+    }
+}
+
+
+
+/* =========================================
+   VERY SMALL PHONE
+   ========================================= */
+
+@media (max-width: 400px) {
+
+    #header-line {
+        width: 94%;
+    }
+
+    .in-header-line {
+        margin: 4px 6px;
+        font-size: 11px;
+    }
+
+
+    #box {
+        margin-top: 35px;
+    }
+
+    #msg {
+        font-size: 1.2rem;
+    }
+
+
+    #intro {
+        width: 94%;
+        padding: 10px;
+    }
+
+    #photo {
+        width: 150px;
+        height: 150px;
+    }
+
+    #intro-para {
+        padding: 12px;
+    }
+
+
+    #about {
+        font-size: 1.1rem;
+    }
+
+    #details {
+        font-size: 13px;
+    }
+
+    #more {
+        font-size: 12px;
+    }
+
+
+    /* SKILLS */
+
+    .skill h1 {
+        font-size: 1.4rem;
+    }
+
+    #tech {
+        width: 94%;
+        gap: 15px;
+    }
+
+    #tech > div {
+        width: 125px;
+        height: 125px;
+    }
+
+
+    /* PROJECTS */
+
+    #projects {
+        width: 94%;
+        gap: 15px;
+    }
+
+    #projects > div,
+    #tictac,
+    #rps,
+    #pyqs,
+    #curr,
+    #amazon {
+        width: 250px;
+        height: 250px;
+    }
+
+
+    /* GOAL */
+
+    #goals h1 {
+        font-size: 1.4rem;
+    }
+
+    #goal-description {
+        font-size: 0.9rem;
+    }
+}

@@ -1,0 +1,117 @@
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family: Arial;
+}
+.top{
+    height:100px;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background-color:#56698f ;
+    color:white;
+}
+main{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items: center;
+}
+.content{
+    height:300px;
+    width:600px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+}
+.box{
+    height:120px;
+    width:120px;
+    border-radius:50%;
+    background-size: cover;
+}
+.box:hover{
+    border:2px solid #56698f;
+}
+#rock{
+    background-image:url("rock.png");
+}
+#paper{
+    background-image:url("paper.png");
+}
+#scissor{
+    background-image:url("scissor.png");
+}
+.scores{
+    height:100px;
+    width:200px;
+    display:flex;
+    justify-content:space-evenly;
+    align-items: center;
+    margin-bottom:20px;
+}
+.you{
+    height:80px;
+    width:80px;
+    text-align:center;
+    font-size:2rem;
+}
+.comp{
+    height:80px;
+    width:80px;
+    text-align:center;
+    font-size:2rem;
+}
+.panel{
+    width:400px;
+    height:60px;
+    border-radius:20px;
+    line-height:60px;
+    text-align:center;
+    background-color:#f1edae;
+    font-size:1.5rem;
+}
+
+@media (max-width: 650px) {
+
+    .content {
+        width: 100%;
+        height: 250px;
+        padding: 0 1rem;
+    }
+
+    .box {
+        width: 90px;
+        height: 90px;
+    }
+
+    .panel {
+        width: 90%;
+        font-size: 1.2rem;
+    }
+
+    .top {
+        height: 80px;
+    }
+
+    .top h1 {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 400px) {
+
+    .box {
+        width: 75px;
+        height: 75px;
+    }
+
+    .top h1 {
+        font-size: 1.4rem;
+    }
+
+    .panel {
+        font-size: 1rem;
+    }
+}
